@@ -1,0 +1,218 @@
+[33mtag v0.1[m
+Tagger: EzequielLara <ezk2442@gmail.com>
+Date:   Mon Mar 1 16:59:45 2021 +0100
+
+Sin interaccion
+
+[33mcommit 1a65aeb0f5356a0bc37c542be7748ad37ef28928[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;33mtag: v0.1[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: EzequielLara <ezk2442@gmail.com>
+Date:   Mon Mar 1 16:36:47 2021 +0100
+
+    implementando diseño
+
+[1mdiff --git a/carrito.js b/carrito.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8b13789[m
+[1m--- /dev/null[m
+[1m+++ b/carrito.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m
+[1mdiff --git a/estilos.css b/estilos.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6e0afb3[m
+[1m--- /dev/null[m
+[1m+++ b/estilos.css[m
+[36m@@ -0,0 +1,17 @@[m
+[32m+[m[32mbody {[m
+[32m+[m[32m  background-color: rgb(218, 216, 216);[m
+[32m+[m[41m  [m
+[32m+[m[32m}[m
+[32m+[m[32m.card:hover {[m
+[32m+[m[32m  transform: scale(1.05);[m
+[32m+[m[32m  transition: transform 0.1s;[m
+[32m+[m[32m}[m
+[32m+[m[32m.producto {[m
+[32m+[m[32m  float: left;[m
+[32m+[m[32m  width: 15rem;[m
+[32m+[m[32m  margin: 15px;[m
+[32m+[m[32m  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);[m
+[32m+[m[32m}[m
+[32m+[m[32mfooter {[m
+[32m+[m[32m  clear: both;[m
+[32m+[m[32m}[m
+[1mdiff --git a/imagenes/cart.png b/imagenes/cart.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..51fe00b[m
+Binary files /dev/null and b/imagenes/cart.png differ
+[1mdiff --git a/imagenes/curso1.jpg b/imagenes/curso1.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5e2f72a[m
+Binary files /dev/null and b/imagenes/curso1.jpg differ
+[1mdiff --git a/imagenes/curso2.jpg b/imagenes/curso2.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c6748d6[m
+Binary files /dev/null and b/imagenes/curso2.jpg differ
+[1mdiff --git a/imagenes/curso3.jpg b/imagenes/curso3.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..cce1354[m
+Binary files /dev/null and b/imagenes/curso3.jpg differ
+[1mdiff --git a/imagenes/curso4.jpg b/imagenes/curso4.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4a6c92b[m
+Binary files /dev/null and b/imagenes/curso4.jpg differ
+[1mdiff --git a/imagenes/curso5.jpg b/imagenes/curso5.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f28a303[m
+Binary files /dev/null and b/imagenes/curso5.jpg differ
+[1mdiff --git a/index.html b/index.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c1a8dad[m
+[1m--- /dev/null[m
+[1m+++ b/index.html[m
+[36m@@ -0,0 +1,146 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m  <head>[m
+[32m+[m[32m    <meta charset="UTF-8" />[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge" />[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0" />[m
+[32m+[m[32m    <title>PRÁCTICA CARRITO DE COMPRA</title>[m
+[32m+[m[32m    <link[m
+[32m+[m[32m      rel="stylesheet"[m
+[32m+[m[32m      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"[m
+[32m+[m[32m      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"[m
+[32m+[m[32m      crossorigin="anonymous"[m
+[32m+[m[32m    />[m
+[32m+[m[32m    <link rel="stylesheet" href="estilos.css" type="text/css"/>[m
+[32m+[m[32m    <script[m
+[32m+[m[32m      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"[m
+[32m+[m[32m      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"[m
+[32m+[m[32m      crossorigin="anonymous"[m
+[32m+[m[32m    ></script>[m
+[32m+[m[32m    <script[m
+[32m+[m[32m      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"[m
+[32m+[m[32m      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"[m
+[32m+[m[32m      crossorigin="anonymous"[m
+[32m+[m[32m    ></script>[m
+[32m+[m[32m    <script[m
+[32m+[m[32m      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"[m
+[32m+[m[32m      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"[m
+[32m+[m[32m      crossorigin="anonymous"[m
+[32m+[m[32m    ></script>[m
+[32m+[m[32m  </head>[m
+[32m+[m
+[32m+[m
+[32m+[m[32m  <body>[m
+[32m+[m[32m    <!--NAVEGACION CARRITO-->[m
+[32m+[m[32m    <div>[m
+[32m+[m[32m      <nav class="navbar navbar-light bg-light">[m
+[32m+[m[32m        <a class="navbar-brand"> TIENDA DE CURSOS ONLINE </a>[m
+[32m+[m[32m        <a class="navbar-brand" href="#">[m
+[32m+[m[32m          <img src="imagenes/cart.png" width="35" height="35" alt="" />[m
+[32m+[m[32m        </a>[m
+[32m+[m[32m      </nav>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <!--TITULO-->[m
+[32m+[m[32m    <h5 class="font-weight-normal text-md-center" style="margin: 40px">[m
+[32m+[m[32m      AÑADE TUS CURSOS AL CARRITO[m
+[32m+[m[32m    </h5>[m
+[32m+[m
+[32m+[m[32m    <div class="container">[m
+[32m+[m
+[32m+[m[32m      <!--PRODUCTO 1-->[m
+[32m+[m[32m      <div class="producto">[m
+[32m+[m[32m        <div class="card">[m
+[32m+[m[32m          <img[m
+[32m+[m[32m            class="card-img-top"[m
+[32m+[m[32m            src="imagenes/curso1.jpg"[m
+[32m+[m[32m            alt="Imagen ordenador"[m
+[32m+[m[32m          />[m
+[32m+[m[32m          <div class="card-body">[m
+[32m+[m[32m            <h5 class="card-title">Curso Informática Básica</h5>[m
+[32m+[m[32m            <p class="card-text">[m
+[32m+[m[32m              Adquiere los conocimientos básicos para desenvolverte en tu[m
+[32m+[m[32m              entorno laboral.[m
+[32m+[m[32m            </p>[m
+[32m+[m[32m            <a href="#" class="btn btn-primary">Añadir al carrito</a>[m
+[32m+[m[32m          </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m      </div>[m
+[32m+[m
+[32m+[m[32m      <!--PRODUCTO 2-->[m
+[32m+[m[32m      <div class="producto">[m
+[32m+[m[32m        <div class="card">[m
+[32m+[m[32m          <img[m
+[32m+[m[32m            class="card-img-top"[m
+[32m+[m[32m            src="imagenes/curso2.jpg"[m
+[32m+[m[32m            alt="Imagen holla hortalizas"[m
+[32m+[m[32m          />[m
+[32m+[m[32m          <div class="card-body">[m
+[32m+[m[32m            <h5 class="card-title">Curso de cocina para principiantes</h5>[m
+[32m+[m[32m            <p class="card-text">[m
+[32m+[m[32m              La salud es lo primero, aprende las recetas más saludables y[m
+[32m+[m[32m              económicas[m
+[32m+[m[32m            </p>[m
+[32m+[m[32m            <a href="#" class="btn btn-primary">Añadir al carrito</a>[m
+[32m+[m[32m          </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m      </div>[m
+[32m+[m
+[32m+[m[32m      <!--PRODUCTO 3-->[m
+[32m+[m[32m      <div class="producto">[m
+[32m+[m[32m        <div class="card">[m
+[32m+[m[32m          <img[m
+[32m+[m[32m            class="card-img-top"[m
+[32m+[m[32m            src="imagenes/curso3.jpg"[m
+[32m+[m[32m            alt="Imagen tocando guitarra"[m
+[32m+[m[32m          />[m
+[32m+[m[32m          <div class="card-body">[m
+[32m+[m[32m            <h5 class="card-title">Curso de guitarra</h5>[m
+[32m+[m[32m            <p class="card-text">[m
+[32m+[m[32m              Sorpréndete con esta fantástica guía de recursos y técnicas que te[m
+[32m+[m[32m              harán dar el salto en tu aprendizaje.[m
+[32m+[m[32m            </p>[m
+[32m+[m[32m            <a href="#" class="btn btn-primary">Añadir al carrito</a>[m
+[32m+[m[32m          </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m      </div>[m
+[32m+[m
+[32m+[m[32m      <!--PRODUCTO 4-->[m
+[32m+[m[32m      <div class="producto">[m
+[32m+[m[32m        <div class="card">[m
+[32m+[m[32m          <img[m
+[32m+[m[32m            class="card-img-top"[m
+[32m+[m[32m            src="imagenes/curso4.jpg"[m
+[32m+[m[32m            alt="Imagen plantando"[m
+[32m+[m[32m          />[m
+[32m+[m[32m          <div class="card-body">[m
+[32m+[m[32m            <h5 class="card-title">Curso de jardinería</h5>[m
+[32m+[m[32m            <p class="card-text">[m
+[32m+[m[32m              Sácale partido a tus siembras, miles de trucos y consejos para el mantenimiento floral[m
+[32m+[m[32m            </p>[m
+[32m+[m[32m            <a href="#" class="btn btn-primary">Añadir al carrito</a>[m
+[32m+[m[32m          </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m      </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m      <!--FOOTER-->[m
+[32m+[m
+[32m+[m[32m    <footer class="bg-light text-center text-lg-start">[m
+[32m+[m[32m      <div[m
+[32m+[m[32m        class="text-sm-center p-4"[m
+[32m+[m[32m        style="background-color: rgba(0, 0, 0, 0.2)"[m
+[32m+[m[32m      >[m
+[32m+[m[32m        Desarrollador:[m
+[32m+[m[32m        <a class="text-muted" href="https://github.com/EzequielLara" target="_blank"[m
+[32m+[m[32m          >EzequielLara</a[m
+[32m+[m[32m        >[m
+[32m+[m[32m        2021-Marzo[m
+[32m+[m[32m      </div>[m
+[32m+[m[32m    </footer>[m
+[32m+[m
+[32m+[m[32m    <!--SCRIPTS-->[m
+[32m+[m[32m    <script src="carrito.js"></script>[m
+[32m+[m
+[32m+[m[32m  </body>[m
+[32m+[m[32m</html>[m

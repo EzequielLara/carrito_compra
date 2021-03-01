@@ -35,10 +35,31 @@
     <div>
       <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand"> TIENDA DE CURSOS ONLINE </a>
+
+        <!--RESUMEN CARRITO-->
+        <div id="carrito">
+          <table id="lista-carrito" class="table table-responsive-sm table-warning">
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <a href='#' class="btn btn-danger"id="vaciar-carrito">Vaciar Carrito</a>
+        </div>
+
+
         <a class="navbar-brand" href="#">
           <img src="imagenes/cart.png" width="35" height="35" alt="" />
         </a>
       </nav>
+
+      
     </div>
 
     <!--TITULO-->
@@ -46,7 +67,7 @@
       AÑADE TUS CURSOS AL CARRITO
     </h5>
 
-    <div class="container">
+    <div id="lista-cursos" class="container">
 
       <!--PRODUCTO 1-->
       <div class="producto">
@@ -62,7 +83,8 @@
               Adquiere los conocimientos básicos para desenvolverte en tu
               entorno laboral.
             </p>
-            <a href="#" class="btn btn-primary">Añadir al carrito</a>
+            <h2><span class="precio" style="float:right">50€</span></h2>
+            <a href="#" class="btn btn-primary agregar-carrito" id = 1>Añadir al carrito</a>
           </div>
         </div>
       </div>
@@ -81,7 +103,8 @@
               La salud es lo primero, aprende las recetas más saludables y
               económicas
             </p>
-            <a href="#" class="btn btn-primary">Añadir al carrito</a>
+            <h2><span class="precio" style="float:right">45€</span></h2>
+            <a href="#" class="btn btn-primary agregar-carrito" id = 2>Añadir al carrito</a>
           </div>
         </div>
       </div>
@@ -100,7 +123,8 @@
               Sorpréndete con esta fantástica guía de recursos y técnicas que te
               harán dar el salto en tu aprendizaje.
             </p>
-            <a href="#" class="btn btn-primary">Añadir al carrito</a>
+            <h2><span class="precio" style="float:right">35€</span></h2>
+            <a href="#" class="btn btn-primary agregar-carrito" id = 3>Añadir al carrito</a>
           </div>
         </div>
       </div>
@@ -118,7 +142,8 @@
             <p class="card-text">
               Sácale partido a tus siembras, miles de trucos y consejos para el mantenimiento floral
             </p>
-            <a href="#" class="btn btn-primary">Añadir al carrito</a>
+            <h2><span class="precio" style="float:right;">80€</span></h2>
+            <a href="#" class="btn btn-primary agregar-carrito" id = 4>Añadir al carrito</a>
           </div>
         </div>
       </div>
