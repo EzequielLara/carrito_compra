@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRÁCTICA CARRITO DE COMPRA</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="estilos.css" type="text/css"/>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+
+  <body>
+    <!--NAVEGACION CARRITO-->
+    <div>
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand"> TIENDA DE CURSOS ONLINE </a>
+        <a class="navbar-brand" href="#">
+          <img src="imagenes/cart.png" width="35" height="35" alt="" />
+        </a>
+      </nav>
+    </div>
+
+    <!--TITULO-->
+    <h5 class="font-weight-normal text-md-center" style="margin: 40px">
+      AÑADE TUS CURSOS AL CARRITO
+    </h5>
+
+    <div class="container">
+
+      <!--PRODUCTO 1-->
+      <div class="producto">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="imagenes/curso1.jpg"
+            alt="Imagen ordenador"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Curso Informática Básica</h5>
+            <p class="card-text">
+              Adquiere los conocimientos básicos para desenvolverte en tu
+              entorno laboral.
+            </p>
+            <a href="#" class="btn btn-primary">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      <!--PRODUCTO 2-->
+      <div class="producto">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="imagenes/curso2.jpg"
+            alt="Imagen holla hortalizas"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Curso de cocina para principiantes</h5>
+            <p class="card-text">
+              La salud es lo primero, aprende las recetas más saludables y
+              económicas
+            </p>
+            <a href="#" class="btn btn-primary">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      <!--PRODUCTO 3-->
+      <div class="producto">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="imagenes/curso3.jpg"
+            alt="Imagen tocando guitarra"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Curso de guitarra</h5>
+            <p class="card-text">
+              Sorpréndete con esta fantástica guía de recursos y técnicas que te
+              harán dar el salto en tu aprendizaje.
+            </p>
+            <a href="#" class="btn btn-primary">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      <!--PRODUCTO 4-->
+      <div class="producto">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="imagenes/curso4.jpg"
+            alt="Imagen plantando"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Curso de jardinería</h5>
+            <p class="card-text">
+              Sácale partido a tus siembras, miles de trucos y consejos para el mantenimiento floral
+            </p>
+            <a href="#" class="btn btn-primary">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!--FOOTER-->
+
+    <footer class="bg-light text-center text-lg-start">
+      <div
+        class="text-sm-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+        Desarrollador:
+        <a class="text-muted" href="https://github.com/EzequielLara" target="_blank"
+          >EzequielLara</a
+        >
+        2021-Marzo
+      </div>
+    </footer>
+
+    <!--SCRIPTS-->
+    <script src="carrito.js"></script>
+
+  </body>
+</html>

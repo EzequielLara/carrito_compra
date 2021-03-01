@@ -1,0 +1,17 @@
+body {
+  background-color: rgb(218, 216, 216);
+  
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.1s;
+}
+.producto {
+  float: left;
+  width: 15rem;
+  margin: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+footer {
+  clear: both;
+}
