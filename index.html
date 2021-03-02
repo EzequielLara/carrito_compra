@@ -30,19 +30,20 @@
   </head>
 
   <body>
-    <!--NAVEGACION CARRITO-->
+    <!--NAVEGACION-->
     <div>
       <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand"> TIENDA DE CURSOS ONLINE </a> 
+        <a class="navbar-brand"><h4 class="text-muted">CURSOS ON-LINE</h4> </a> 
         <a class="navbar-brand imagen-carrito" href="#">
           <img src="imagenes/cart.png" width="35" height="35" alt="" />
+          <span>Pulsa carrito</span>
         </a>
       </nav>   
     </div>
     <!--PRODUCTOS CARRITO-->
    <div id="carrito">
     <div class="card sombra ">
-    <table id="lista-carrito" class="table table-responsive-sm table-light">
+    <table id="lista-carrito" class="table table-responsive-lg table-light">
       <thead class="text-center">
         <tr>
           <th>Imagen</th>
@@ -50,6 +51,7 @@
           <th>Precio</th>
           <th>Cantidad</th>
           <th>Total</th>
+          <th></th>
         </tr>
         
       </thead>
@@ -58,7 +60,7 @@
         <th></th>
         <th></th>
         <th></th>
-        <th>Total a pagar:</th>
+        <th>Total:</th>
         <th>0€</th>
       </tr>
     </table>
@@ -66,8 +68,8 @@
     </div>
   </div>
     <!--TITULO-->
-    <h5 class="font-weight-normal text-md-center" style="margin: 40px">
-      AÑADE TUS CURSOS AL CARRITO
+    <h5 class="font-weight-normal text-md-center text-muted" style="margin: 40px">
+      CURSOS DISPONIBLES
     </h5>
 
     <div id="lista-cursos" class="container">

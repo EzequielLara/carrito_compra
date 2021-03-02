@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(218, 216, 216);
+ background-color: rgba(255, 255, 255, 0.516);
   
 }
 .card:hover {
@@ -20,11 +20,20 @@ footer {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #carrito{
-width: 60%;
+position:fixed;
+left: 45%;
+width: 50%;
 margin: auto;
  font-size: 17px;
  z-index: 20;
  display:none;
+}
+
+.borrar-curso, a:hover{
+ 
+  
+  color: red;
+  
 }
 
 

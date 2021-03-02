@@ -23,16 +23,20 @@ function cargarEventListeners(){
 
 function mostrarOcultar(){
    if(carrito.style.display =='none'){
-
+       
+        
+        
         carrito.style.display = 'block';
         imagenCarrito.src = 'imagenes/carro.png'
         
-        
+       
     }else{
+        
+       
         
         carrito.style.display = 'none';
         imagenCarrito.src = 'imagenes/cart.png'
-        
+       
     
    }
      
@@ -66,8 +70,27 @@ function leerDatosCurso(curso){
         id: curso.querySelector('.agregar-carrito').getAttribute('id'), 
         cantidad: 1,
     }
+
+    const existe = productosCarrito.some( curso => curso.id === infoCurso.id);
+
+    if(existe){
+        const cursos = productosCarrito.map(curso=>{
+            if(curso.id === infoCurso.id){
+
+                curso.cantidad ++;
+                return curso; // necesitamos el return porque map crea un nuevo array. En este caso retorna el curso actualizado.
+
+            }else{
+                return curso; // retorna el curso 
+            }
+        });
+        
+        productosCarrito = [...cursos];
+
+    }else{
     
-    productosCarrito =[...productosCarrito, infoCurso];
+        productosCarrito =[...productosCarrito, infoCurso];
+    };
 
     carritoHTML();
 };
@@ -76,33 +99,59 @@ function leerDatosCurso(curso){
 
 function carritoHTML(){
 
+    limpiarHTML();
 
     productosCarrito.forEach(curso => {
+
+        const { imagen, nombre, precio, 
+        cantidad, id, valor } = curso;
 
         const row = document.createElement('tr');
         
         row.innerHTML =`
            
             <td>
-                <img src="${curso.imagen}" style ="width:100px; height:50px"></>
+                <img src="${imagen}" style ="width:100px; height:50px"></>
             </td>
             <td>
-                ${curso.nombre}
+                ${nombre}
             </td>
             <td>
-                ${curso.precio}
+                ${precio}
             </td>
             <td>
-                ${curso.cantidad}
+                ${cantidad}
             </td>
             <td>
-                ${curso.cantidad*curso.valor}€
+                ${cantidad*valor}€
+            </td>
+            <td>
+                <a href="#" class="borrar-curso" id="${id}">X</a>
             </td>
         `;
         contenedorCarrito.appendChild(row);
-        
-        // vaciar el array para que no se dupliquen en la proxima pulsación los elementos que ya están dibujados en pantalla.
-        productosCarrito=[];
-
     });
+}
+
+function limpiarHTML(){
+
+     // vaciar el tbody para que no se dupliquen en la proxima pulsación los elementos que ya están dibujados en pantalla.
+
+    /* Una forma sencilla pero menos optima sería asi:
+    contenedorCarrito.innerHTML='';
+    */
+
+    /*Forma mas eficiente y rápida:*/
+
+    while(contenedorCarrito.firstChild){
+
+        contenedorCarrito.removeChild(contenedorCarrito.firstChild);
+    };
+
+};
+
+function revisarCantidadDelProducto(infoCurso){
+
+    
+    
 }
