@@ -20,10 +20,11 @@ footer {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #carrito{
-width: 70%;
+width: 60%;
 margin: auto;
- font-size: 15px;
+ font-size: 17px;
  z-index: 20;
  display:none;
 }
+
 

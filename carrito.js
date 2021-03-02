@@ -4,7 +4,7 @@ const carrito = document.querySelector('#carrito');
 const listaCursos = document.querySelector('#lista-cursos');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
-const imagenCarrito = document.querySelector('.imagen-carrito');
+const imagenCarrito = document.querySelector('.imagen-carrito img');
 
 let productosCarrito = [];
 
@@ -25,11 +25,15 @@ function mostrarOcultar(){
    if(carrito.style.display =='none'){
 
         carrito.style.display = 'block';
+        imagenCarrito.src = 'imagenes/carro.png'
         
-
-   }else{
-
+        
+    }else{
+        
         carrito.style.display = 'none';
+        imagenCarrito.src = 'imagenes/cart.png'
+        
+    
    }
      
 
@@ -57,9 +61,10 @@ function leerDatosCurso(curso){
 
         imagen: curso.querySelector('img').src,
         nombre: curso.querySelector('.card-title').innerText,
-        precio: parseInt(curso.querySelector('.precio').innerText),
-       id: curso.querySelector('.agregar-carrito').getAttribute('id'), 
-       cantidad: 1,
+        precio: curso.querySelector('.precio').innerText,
+        valor: parseInt(curso.querySelector('.precio').innerText,), 
+        id: curso.querySelector('.agregar-carrito').getAttribute('id'), 
+        cantidad: 1,
     }
     
     productosCarrito =[...productosCarrito, infoCurso];
@@ -79,7 +84,7 @@ function carritoHTML(){
         row.innerHTML =`
            
             <td>
-                ${curso.imagen}
+                <img src="${curso.imagen}" style ="width:100px; height:50px"></>
             </td>
             <td>
                 ${curso.nombre}
@@ -91,7 +96,7 @@ function carritoHTML(){
                 ${curso.cantidad}
             </td>
             <td>
-                ${curso.cantidad*curso.precio}
+                ${curso.cantidad*curso.valor}€
             </td>
         `;
         contenedorCarrito.appendChild(row);
