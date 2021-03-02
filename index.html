@@ -29,39 +29,34 @@
     ></script>
   </head>
 
-
   <body>
     <!--NAVEGACION CARRITO-->
     <div>
       <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand"> TIENDA DE CURSOS ONLINE </a>
-
-        <!--RESUMEN CARRITO-->
-        <div id="carrito">
-          <table id="lista-carrito" class="table table-responsive-sm table-warning">
-            <thead>
-              <tr>
-                <th>Imagen</th>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-          <a href='#' class="btn btn-danger"id="vaciar-carrito">Vaciar Carrito</a>
-        </div>
-
-
+        <a class="navbar-brand"> TIENDA DE CURSOS ONLINE </a> 
         <a class="navbar-brand" href="#">
-          <img src="imagenes/cart.png" width="35" height="35" alt="" />
+          <img class="imagen-carrito" src="imagenes/cart.png" width="35" height="35" alt="" />
         </a>
-      </nav>
-
-      
+      </nav>   
     </div>
-
+    <!--PRODUCTOS CARRITO-->
+   <div id="carrito">
+    <div class="card sombra ">
+    <table id="lista-carrito" class="table table-responsive-sm table-light">
+      <thead class="text-center">
+        <tr>
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody class="text-center"></tbody>
+    </table>
+    <a href='#' class="btn btn-danger"id="vaciar-carrito">Vaciar Carrito</a>
+    </div>
+  </div>
     <!--TITULO-->
     <h5 class="font-weight-normal text-md-center" style="margin: 40px">
       AÑADE TUS CURSOS AL CARRITO
@@ -148,7 +143,7 @@
         </div>
       </div>
     </div>
-
+     
       <!--FOOTER-->
 
     <footer class="bg-light text-center text-lg-start">
