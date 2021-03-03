@@ -24,6 +24,7 @@ function cargarEventListeners(){
     vaciarCarritoBtn.addEventListener('click', () =>{
          productosCarrito =[];
          limpiarHTML();
+         totalCarrito.innerHTML= 0;
     });
 };
 
@@ -173,11 +174,7 @@ function limpiarHTML(){
 
         contenedorCarrito.removeChild(contenedorCarrito.firstChild);
     };
+    
 
 };
 
-function revisarCantidadDelProducto(infoCurso){
-
-    
-    
-}
