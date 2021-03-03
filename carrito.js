@@ -5,6 +5,7 @@ const listaCursos = document.querySelector('#lista-cursos');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 const imagenCarrito = document.querySelector('.imagen-carrito img');
+const totalCarrito = document.querySelector('#total-carrito');
 
 let productosCarrito = [];
 
@@ -17,6 +18,13 @@ function cargarEventListeners(){
     listaCursos.addEventListener('click', agregarCurso);
     //Cuando pulsamos la imagen del carrito ocultamos o mostramos el carrito
     imagenCarrito.addEventListener('click', mostrarOcultar);
+
+    carrito.addEventListener('click', eliminarCurso);
+
+    vaciarCarritoBtn.addEventListener('click', () =>{
+         productosCarrito =[];
+         limpiarHTML();
+    });
 };
 
 //FUNCIONES
@@ -56,7 +64,18 @@ function agregarCurso(e){
 
 };
 
-//
+function eliminarCurso(e){
+
+    if(e.target.classList.contains('borrar-curso')){
+        const cursoId = e.target.getAttribute('id');
+        productosCarrito = productosCarrito.filter(curso=>curso.id !== cursoId);
+
+       carritoHTML();
+    }
+
+}
+
+
 function leerDatosCurso(curso){
 
     //creamos objeto con la info del curso
@@ -101,10 +120,15 @@ function carritoHTML(){
 
     limpiarHTML();
 
+    let sumatotal = 0;
+
     productosCarrito.forEach(curso => {
 
         const { imagen, nombre, precio, 
-        cantidad, id, valor } = curso;
+            cantidad, id, valor } = curso; 
+
+        sumatotal = sumatotal + (valor * cantidad);
+       
 
         const row = document.createElement('tr');
         
@@ -123,14 +147,16 @@ function carritoHTML(){
                 ${cantidad}
             </td>
             <td>
-                ${cantidad*valor}€
+                ${valor * cantidad}€
             </td>
             <td>
                 <a href="#" class="borrar-curso" id="${id}">X</a>
             </td>
         `;
         contenedorCarrito.appendChild(row);
+
     });
+        totalCarrito.innerHTML = `${sumatotal}`;
 }
 
 function limpiarHTML(){
